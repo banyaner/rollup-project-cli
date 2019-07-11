@@ -1,16 +1,20 @@
 /**
- * Created by zhongjx on 2019-01-26.
+ * Created by zhongjx on 2019-07-12.
  */
-const test = () => {
-  if (process.browser) {
-    console.log(1)
-  } else {
-    console.log(2)
+const inquirer = require('inquirer')
+const promptList = [
+  {
+    type: 'list',
+    message: '请选择一种水果:',
+    name: 'fruit',
+    choices: ['Apple', 'Pear', 'Banana'],
+    filter: function(val) {
+      // 使用filter将回答变为小写
+      return val.toLowerCase()
+    }
   }
-}
-new Promise(res => {
-  res(1)
+]
+
+inquirer.prompt(promptList).then(answers => {
+  console.log(answers) // 返回的结果
 })
-const arr = Array.from(1, 2, 3)
-console.log([...arr])
-export { test }
