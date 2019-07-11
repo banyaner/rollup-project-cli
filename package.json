@@ -1,7 +1,7 @@
 {
-  "name": "rollup_template",
+  "name": "rollup-project-cli",
   "version": "1.0.0",
-  "description": "a basic template for build a library",
+  "description": "cli for rollup-project-template",
   "main": "dist/rollup_template.js",
   "module": "lib/rollup_template.es.js",
   "scripts": {
@@ -24,7 +24,7 @@
       ]
     }
   },
-  "author": "Banyaner",
+  "author": "amy_zhjx@163.com",
   "license": "ISC",
   "devDependencies": {
     "@babel/cli": "^7.5.0",
